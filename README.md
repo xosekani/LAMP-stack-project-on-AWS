@@ -152,15 +152,10 @@ Copyright (c) The PHP Group
 Zend Engine v3.4.0, Copyright (c) Zend Technologies
 </code>
   </pre>
-  <button onclick="copyPHPVersion()" title="Copy to clipboard" style="position: absolute; top: 10px; right: 10px; cursor: pointer;">📋</button>
+  <button onclick="copyPHPVersion()" title="Copy to clipboard" style="position: absolute; top: 10px; right: 10px; cursor: pointer;"></button>
 </div>
 
-<script>
-function copyPHPVersion() {
-  const text = document.getElementById("phpVersion").innerText;
-  navigator.clipboard.writeText(text);
-}
-</script>
+
 
 
 ![](images/4.PNG)
@@ -202,15 +197,10 @@ This will create a new blank file. Paste in the following bare-bones configurati
 &lt;/VirtualHost&gt;
 </code>
   </pre>
-  <button onclick="copyToClipboard()" title="Copy to clipboard" style="position: absolute; top: 10px; right: 10px; cursor: pointer;">📋</button>
+  <button onclick="copyToClipboard()" title="Copy to clipboard" style="position: absolute; top: 10px; right: 10px; cursor: pointer;"></button>
 </div>
 
-<script>
-function copyToClipboard() {
-  const text = document.getElementById("vhostConfig").innerText;
-  navigator.clipboard.writeText(text);
-}
-</script>
+
 
 ![](images/4b.PNG)
 
@@ -245,15 +235,10 @@ Your new website is now active, but the web root `/var/www/projectlamp` is still
 sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
 </code>
   </pre>
-  <button onclick="copyLAMPCommand()" title="Copy to clipboard" style="position: absolute; top: 10px; right: 10px; cursor: pointer;">📋</button>
+  <button onclick="copyLAMPCommand()" title="Copy to clipboard" style="position: absolute; top: 10px; right: 10px; cursor: pointer;"></button>
 </div>
 
-<script>
-function copyLAMPCommand() {
-  const text = document.getElementById("lampCommand").innerText;
-  navigator.clipboard.writeText(text);
-}
-</script>
+
 
 
 ![](images/5.PNG)
@@ -264,7 +249,7 @@ Now go to your browser and try to open your website URL using IP address:
 You can see the text "Hello LAMP from hostname" as in the command above.
 
 ## Step 6: Enable PHP on the Website
-With the default DirectoryIndex settings on Apache, a file named `index.html` will always take precedence over an `index.php file.` This is useful for setting up maintenance pages in PHP applications, by creating a temporary `index.html` file containing an informative message to visitors. Because this page will take precedence over the `index.php` page, it will then become the landing page for the application. Once maintenance is over, the `index.html` is renamed or removed from the document root, bringing back the regular application page. In case you want to change this behavior, you’ll need to edit the `/etc/apache2/mods-enabled/dir.conf` file and change the order in which the `index.php file` is listed within the `DirectoryIndex directive`:   
+With the default DirectoryIndex settings on Apache, a file named `index.html` will always take precedence over an `index.php file.` This is useful for setting up maintenance pages in PHP applications, by creating a temporary `index.html` file containing an informative message to visitors. Because this page will take precedence over the `index.php` page, it will then become the landing page for the application. Once maintenance is over, the `index.html` is renamed or removed from the document root, bringing back the regular application page. In case you want to change this behavior, you’ll need to edit the `/etc/apache2/mods-enabled/dir.conf` file and change the order in which the `index.php file` is listed within the DirectoryIndex directive:   
  `sudo vim /etc/apache2/mods-enabled/dir.conf`
 
 
@@ -275,7 +260,7 @@ With the default DirectoryIndex settings on Apache, a file named `index.html` wi
     #To this:
     DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 </IfModule>`)" 
-  style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; color: #ccc; font-size: 16px; cursor: pointer;" title="Copy to clipboard">📋</button>
+  style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; color: #ccc; font-size: 16px; cursor: pointer;" title="Copy to clipboard"></button>
 
   <pre style="margin: 0;"><code>&lt;IfModule mod_dir.c&gt;
     #Change this:
